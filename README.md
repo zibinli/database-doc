@@ -3,4 +3,5 @@
 ```shell
 npm i
 node index.js 'mysql://user:pass@host/db'
+node index.js 'mysql://user:pass@host/db'
 ```

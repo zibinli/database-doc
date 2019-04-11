@@ -3,8 +3,8 @@ const fs = require('fs');
 const mysql = require('mysql');
 const args = process.argv.slice(2);
 let mysqlurl = args.pop();
+mysqlurl = mysqlurl.substr(0, mysqlurl.length);
 try {
-    mysqlurl = mysqlurl.substr(1, mysqlurl.length - 2);
     let mysqlurlArr = mysqlurl.split('/');
     let schema = mysqlurlArr[3];
     let output = args.pop() || schema + '.md';
